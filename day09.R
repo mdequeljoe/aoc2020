@@ -38,7 +38,7 @@ any_valid <- function(x, n)
 
 l <- readLines('data/day09.txt', warn = FALSE)
 l <- as.numeric(l)
-(res <- .f(l, 25))
+res <- print( .f(l, 25) )
 
 # part two
 i <- j <- 1
@@ -58,7 +58,8 @@ repeat{
     set <- numeric(0)
     j <- j + 1
     i <- j
-  }
+    next()
+  } 
   i <- i + 1
 }
-( min(set) + max(set) )
+print( min(set) + max(set) )
